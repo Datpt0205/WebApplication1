@@ -1,0 +1,16 @@
+﻿@model IEnumerable<WebApplication1.Models.Todo>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>This is Index is of TodosController</h2>
+<p>This is an example of p tag</p>
+
+<ul>
+    @foreach (var todo in Model)
+    {
+   <li>Id: @todo.Id</li>
+   <li>Desciprtion: @todo.Description</li>
+   <li>DueDate: @todo.DueDate.ToString("dd-MM-yy")</li>
+    }
+</ul>
